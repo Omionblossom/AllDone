@@ -27,6 +27,32 @@ struct LoginView: View {
                } // end of VStack
                .padding(.horizontal, 32)   // also .leading and .tailing possible. Add to VStack
           
+               HStack {
+                   Spacer()  // filling up the space
+                   
+                   Button {
+                       // forgot password action
+                   } label: {
+                       Text("Forgot Password")
+                           .foregroundColor(.white)
+                           .font(.system(size: 13, weight: .semibold))
+                           .padding(.top)
+                           .padding(.trailing, 28)
+                   }
+               } // end of HStack
+ 
+               Button {
+                   // sign in Action
+                   
+               } label: {
+                   AuthenticateButtonView(text: "Sign In ")
+                       .padding()
+               }
+
+
+               Spacer()
+               
+               
            } // end of VStack
        } // end of ZStack
    }
