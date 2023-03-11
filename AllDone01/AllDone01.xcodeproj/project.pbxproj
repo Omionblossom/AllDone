@@ -39,6 +39,8 @@
 		46BDF2D129BCCC840028DEBF /* selectedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2D029BCCC830028DEBF /* selectedButton.swift */; };
 		46BDF2D429BCCF690028DEBF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 46BDF2D329BCCF690028DEBF /* FirebaseFirestoreSwift */; };
 		46BDF2D629BCD0EB0028DEBF /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2D529BCD0EA0028DEBF /* MockData.swift */; };
+		46BDF2D829BCD29D0028DEBF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2D729BCD29D0028DEBF /* AuthViewModel.swift */; };
+		46BDF2DA29BCDA2D0028DEBF /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2D929BCDA2D0028DEBF /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		46BDF2CE29BCCAEE0028DEBF /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		46BDF2D029BCCC830028DEBF /* selectedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectedButton.swift; sourceTree = "<group>"; };
 		46BDF2D529BCD0EA0028DEBF /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		46BDF2D729BCD29D0028DEBF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		46BDF2D929BCDA2D0028DEBF /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 			children = (
 				46BDF29E29BC751A0028DEBF /* Utils */,
 				46BDF2A029BC75490028DEBF /* Authentication */,
+				46BDF2D929BCDA2D0028DEBF /* DashboardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 		46BDF29A29BC73E90028DEBF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				46BDF2D729BCD29D0028DEBF /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -410,6 +416,8 @@
 				46BDF2D129BCCC840028DEBF /* selectedButton.swift in Sources */,
 				46BDF2A229BC75720028DEBF /* SignupView.swift in Sources */,
 				46BDF2CF29BCCAEE0028DEBF /* TODO.swift in Sources */,
+				46BDF2DA29BCDA2D0028DEBF /* DashboardView.swift in Sources */,
+				46BDF2D829BCD29D0028DEBF /* AuthViewModel.swift in Sources */,
 				46BDF2A629BC79AC0028DEBF /* LogoView.swift in Sources */,
 				46BDF2B129BC8DC90028DEBF /* PasswordSecureField.swift in Sources */,
 				46BDF29D29BC74C00028DEBF /* LoginView.swift in Sources */,

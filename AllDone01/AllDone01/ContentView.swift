@@ -8,18 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
+        
+        Group {
+            if viewModel.userSession == nil {
+                LoginView()
+            } else {
+                if let user = viewModel.currentUser {
+                    DashboardView(user: user)
+                }
+            }
+        }
 
-        ZStack{
-            BackgroundGradientView()
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-        }
+//        LoginView()
+//        ZStack{
+//            BackgroundGradientView()
+//        VStack {
+//            Image(systemName: "globe")
+//                .imageScale(.large)
+//                .foregroundColor(.accentColor)
+//            Text("Hello, world!")
+//        }
+//        .padding()
+//        }
     }
 }
 

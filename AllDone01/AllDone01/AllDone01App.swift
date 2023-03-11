@@ -29,10 +29,11 @@ struct AllDone01App: App {
     
     var body: some Scene {
         WindowGroup {
-              LoginView()
+//              LoginView()
+            ContentView()
+                .environmentObject(AuthViewModel.shared)
               //       NavigationView {    // firebase mentioned it with ContentView under NavigationView. Taking note here
                         // ContentView()
-//            ContentView()
         }
     }
 }
