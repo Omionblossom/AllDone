@@ -14,6 +14,10 @@
 		46BDF28129BC63BE0028DEBF /* AllDone01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF28029BC63BE0028DEBF /* AllDone01Tests.swift */; };
 		46BDF28B29BC63BE0028DEBF /* AllDone01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF28A29BC63BE0028DEBF /* AllDone01UITests.swift */; };
 		46BDF28D29BC63BE0028DEBF /* AllDone01UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF28C29BC63BE0028DEBF /* AllDone01UITestsLaunchTests.swift */; };
+		46BDF29D29BC74C00028DEBF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF29C29BC74C00028DEBF /* LoginView.swift */; };
+		46BDF2A229BC75720028DEBF /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2A129BC75720028DEBF /* SignupView.swift */; };
+		46BDF2A429BC76FE0028DEBF /* BackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2A329BC76FE0028DEBF /* BackgroundGradientView.swift */; };
+		46BDF2A629BC79AC0028DEBF /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2A529BC79AC0028DEBF /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		46BDF28629BC63BE0028DEBF /* AllDone01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllDone01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BDF28A29BC63BE0028DEBF /* AllDone01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDone01UITests.swift; sourceTree = "<group>"; };
 		46BDF28C29BC63BE0028DEBF /* AllDone01UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDone01UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		46BDF29C29BC74C00028DEBF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		46BDF2A129BC75720028DEBF /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		46BDF2A329BC76FE0028DEBF /* BackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradientView.swift; sourceTree = "<group>"; };
+		46BDF2A529BC79AC0028DEBF /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		46BDF26E29BC63BC0028DEBF /* AllDone01 */ = {
 			isa = PBXGroup;
 			children = (
+				46BDF29B29BC73F70028DEBF /* Model */,
+				46BDF29929BC73D80028DEBF /* View */,
+				46BDF29A29BC73E90028DEBF /* ViewModel */,
 				46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */,
 				46BDF27129BC63BC0028DEBF /* ContentView.swift */,
 				46BDF27329BC63BE0028DEBF /* Assets.xcassets */,
@@ -125,6 +136,47 @@
 				46BDF28C29BC63BE0028DEBF /* AllDone01UITestsLaunchTests.swift */,
 			);
 			path = AllDone01UITests;
+			sourceTree = "<group>";
+		};
+		46BDF29929BC73D80028DEBF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46BDF29E29BC751A0028DEBF /* Utils */,
+				46BDF2A029BC75490028DEBF /* Authentication */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46BDF29A29BC73E90028DEBF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		46BDF29B29BC73F70028DEBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		46BDF29E29BC751A0028DEBF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				46BDF2A329BC76FE0028DEBF /* BackgroundGradientView.swift */,
+				46BDF2A529BC79AC0028DEBF /* LogoView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		46BDF2A029BC75490028DEBF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				46BDF29C29BC74C00028DEBF /* LoginView.swift */,
+				46BDF2A129BC75720028DEBF /* SignupView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BDF2A229BC75720028DEBF /* SignupView.swift in Sources */,
+				46BDF2A629BC79AC0028DEBF /* LogoView.swift in Sources */,
+				46BDF29D29BC74C00028DEBF /* LoginView.swift in Sources */,
 				46BDF27229BC63BC0028DEBF /* ContentView.swift in Sources */,
+				46BDF2A429BC76FE0028DEBF /* BackgroundGradientView.swift in Sources */,
 				46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
