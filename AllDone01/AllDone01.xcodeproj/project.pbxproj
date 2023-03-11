@@ -23,6 +23,7 @@
 		46BDF2AF29BC884D0028DEBF /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2AE29BC884D0028DEBF /* CustomSecureField.swift */; };
 		46BDF2B129BC8DC90028DEBF /* PasswordSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2B029BC8DC90028DEBF /* PasswordSecureField.swift */; };
 		46BDF2B329BC93570028DEBF /* AuthenticateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2B229BC93570028DEBF /* AuthenticateButtonView.swift */; };
+		46BDF2B529BC9AC60028DEBF /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2B429BC9AC60028DEBF /* UserTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		46BDF2AE29BC884D0028DEBF /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		46BDF2B029BC8DC90028DEBF /* PasswordSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSecureField.swift; sourceTree = "<group>"; };
 		46BDF2B229BC93570028DEBF /* AuthenticateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateButtonView.swift; sourceTree = "<group>"; };
+		46BDF2B429BC9AC60028DEBF /* UserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				46BDF2AC29BC84C30028DEBF /* EmailTextField.swift */,
 				46BDF2AE29BC884D0028DEBF /* CustomSecureField.swift */,
 				46BDF2B029BC8DC90028DEBF /* PasswordSecureField.swift */,
+				46BDF2B429BC9AC60028DEBF /* UserTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			files = (
 				46BDF2AD29BC84C30028DEBF /* EmailTextField.swift in Sources */,
 				46BDF2A829BC7DDE0028DEBF /* CustomTextField.swift in Sources */,
+				46BDF2B529BC9AC60028DEBF /* UserTextField.swift in Sources */,
 				46BDF2A229BC75720028DEBF /* SignupView.swift in Sources */,
 				46BDF2A629BC79AC0028DEBF /* LogoView.swift in Sources */,
 				46BDF2B129BC8DC90028DEBF /* PasswordSecureField.swift in Sources */,
