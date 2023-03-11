@@ -12,15 +12,12 @@ struct LoginView: View {
         
        ZStack{
            BackgroundGradientView()
-           Text("Login View")
            
            VStack{
                 LogoView()
            }
-           }
        }
-
-    }
+   }
 }
 
 struct LoginView_Previews: PreviewProvider {
