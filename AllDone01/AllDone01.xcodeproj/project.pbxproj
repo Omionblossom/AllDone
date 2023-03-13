@@ -42,6 +42,7 @@
 		46BDF2D829BCD29D0028DEBF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2D729BCD29D0028DEBF /* AuthViewModel.swift */; };
 		46BDF2DA29BCDA2D0028DEBF /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2D929BCDA2D0028DEBF /* DashboardView.swift */; };
 		46BDF2DC29BEF53C0028DEBF /* TODOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2DB29BEF53C0028DEBF /* TODOViewModel.swift */; };
+		46BDF2DE29BEFE360028DEBF /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF2DD29BEFE360028DEBF /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		46BDF2D729BCD29D0028DEBF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		46BDF2D929BCDA2D0028DEBF /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		46BDF2DB29BEF53C0028DEBF /* TODOViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOViewModel.swift; sourceTree = "<group>"; };
+		46BDF2DD29BEFE360028DEBF /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				46BDF2A329BC76FE0028DEBF /* BackgroundGradientView.swift */,
 				46BDF2A529BC79AC0028DEBF /* LogoView.swift */,
 				46BDF2B229BC93570028DEBF /* AuthenticateButtonView.swift */,
+				46BDF2DD29BEFE360028DEBF /* SearchBarView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				46BDF2CF29BCCAEE0028DEBF /* TODO.swift in Sources */,
 				46BDF2DA29BCDA2D0028DEBF /* DashboardView.swift in Sources */,
 				46BDF2D829BCD29D0028DEBF /* AuthViewModel.swift in Sources */,
+				46BDF2DE29BEFE360028DEBF /* SearchBarView.swift in Sources */,
 				46BDF2A629BC79AC0028DEBF /* LogoView.swift in Sources */,
 				46BDF2B129BC8DC90028DEBF /* PasswordSecureField.swift in Sources */,
 				46BDF29D29BC74C00028DEBF /* LoginView.swift in Sources */,
