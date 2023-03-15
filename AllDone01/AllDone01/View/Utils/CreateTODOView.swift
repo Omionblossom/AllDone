@@ -34,7 +34,7 @@ struct CreateTODOView: View {
             
             HStack {
                 Button {
-                    viewModel.uploadTODOs(todo: TODO(ownerID: user.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
+                    viewModel.uploadTODOs(todo: TODO(ownerUid: user.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
                     viewModel.showCreateTODOView = false
                 } label: {
                     CreateTODOButton()

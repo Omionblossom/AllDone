@@ -54,8 +54,48 @@ struct DashboardView: View {
                     
                 }
                 
+                ScrollView{   // if I want horizontal, do (.horizontal) otherwise vertical
+                    
+                    VStack(spacing: 15){
+                        
+                        ForEach (viewModel.todosFiltered, id: \.id) { todo in
+                        
+                            if searchText == "" {
+                                TODOView(todo: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), viewModel: viewModel)
+                            } else {
+                                if todo.title.lowercased().contains(searchText.lowercased()) ||
+                                    todo.description.lowercased().contains(searchText.lowercased()) {
+                                    TODOView(todo: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), viewModel: viewModel)
+                                } // end of IF statement
+                            }
+                            
+                        } // end of ForEach
+                    } // end of VStack
+                } // end of ScrollView
+                
                 
             } // end of VStack
+            .overlay(
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button {
+                            viewModel.showCreateTODOView = true
+                        } label: {
+                            Image(systemName: "plus")
+                                .padding()
+                                .foregroundColor(.white)
+                                .frame(width: 60, height: 60)
+                                .background(Color("lightBlue"))
+                                .cornerRadius(30)
+                        }
+                        .padding(20)
+                        
+                        } // end of HStack
+
+                    } // end of VStack
+            )
             
         } // end of Zstack
         
