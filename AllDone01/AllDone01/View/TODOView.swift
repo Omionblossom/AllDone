@@ -44,7 +44,6 @@ struct TODOView: View {
                         Text("\(todo.description)")
                             .font(.system(size: 14))
                             .foregroundColor(Color(.systemGray2))
-                    
                     }
                 }
                 

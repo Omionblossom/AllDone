@@ -14,6 +14,8 @@ struct CustomTextEditor: View {
     let imageName: String
     var foregroundColor: Color?   // ? = we might have value or might not have value (optional)
     
+    @Environment(\.colorScheme) var colorScheme
+    
     init(text: Binding<String>, placeholder: Text, imageName: String,
          foregroundColor: Color?) {
         self._text = text
@@ -59,6 +61,7 @@ struct CustomTextEditor: View {
         .frame(height: 120)
         .background(Color(.systemGray6))
         .cornerRadius(10)
+        .foregroundColor(colorScheme == .dark ? .white : .black)
     }
 }
 

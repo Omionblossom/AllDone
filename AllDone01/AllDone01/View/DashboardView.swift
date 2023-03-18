@@ -50,16 +50,14 @@ struct DashboardView: View {
                 if viewModel.todosFiltered.isEmpty {
                     AddTODOLogo()
                         .padding(.top)
-                    
-                    
                 }
                 
-                ScrollView{   // if I want horizontal, do (.horizontal) otherwise vertical
+                ScrollView {   // if I want horizontal, do (.horizontal) otherwise vertical
                     
                     VStack(spacing: 15){
                         
                         ForEach (viewModel.todosFiltered, id: \.id) { todo in
-                        
+                            
                             if searchText == "" {
                                 TODOView(todo: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), viewModel: viewModel)
                             } else {
@@ -67,7 +65,7 @@ struct DashboardView: View {
                                     todo.description.lowercased().contains(searchText.lowercased()) {
                                     TODOView(todo: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), viewModel: viewModel)
                                 } // end of IF statement
-                            }
+                            } // end of else statement
                             
                         } // end of ForEach
                     } // end of VStack
@@ -97,6 +95,12 @@ struct DashboardView: View {
                     } // end of VStack
             )
             
+            if viewModel.showCreateTODOView {
+                BlankView()
+                CreateTODOView(user: user, viewModel: viewModel)
+            }
+            
+            
         } // end of Zstack
         
 //        VStack {
@@ -116,5 +120,6 @@ struct DashboardView: View {
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardView(user: appUser01 )
+//        TODOView(todo: todo01, viewModel: TODOViewModel())
     }
 }

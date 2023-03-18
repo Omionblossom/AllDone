@@ -81,7 +81,7 @@ struct TODOButton: View {
                 .foregroundColor(viewModel.filterTODOSelected == buttonType ?
                     .white : Color(.systemGray))
                 .frame(width: 100, height: 40)
-                .backgroundStyle(buttonType == viewModel.filterTODOSelected ? Color("lightBlue") : Color(.systemGray6))
+                .backgroundStyle(buttonType == viewModel.filterTODOSelected ? Color(.blue) : Color(.systemGray6))
                 .cornerRadius(20)
         }
 

@@ -47,6 +47,7 @@ struct CreateTODOView: View {
                 }
 
             }
+            .padding(.bottom, 10)
             
             Spacer()
         } // end of VStack
@@ -68,7 +69,7 @@ struct CreateTODOButton: View {
         Text ("Create")
             .font(.headline)
             .foregroundColor(.white)
-            .frame(width: 50, height: 40)
+            .frame(width: 80, height: 40)
             .background(Color.blue.opacity(0.6))
             .clipShape(Capsule())
         
@@ -80,7 +81,7 @@ struct CancelTODOButton: View {
         Text ("Cancel")
             .font(.headline)
             .foregroundColor(.white)
-            .frame(width: 50, height: 40)
+            .frame(width: 80, height: 40)
             .background(Color.red.opacity(0.6))
             .clipShape(Capsule())
         

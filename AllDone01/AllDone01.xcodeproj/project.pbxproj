@@ -248,6 +248,7 @@
 				46BDF2E329BF2A8C0028DEBF /* AddTODOLogo.swift */,
 				46BDF2E729BF36680028DEBF /* BlankView.swift */,
 				46BDF2E929BF36EC0028DEBF /* CreateTODOView.swift */,
+				46BDF2ED29C1BDC50028DEBF /* CustomTextEditor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -270,7 +271,6 @@
 				46BDF2B029BC8DC90028DEBF /* PasswordSecureField.swift */,
 				46BDF2B429BC9AC60028DEBF /* UserTextField.swift */,
 				46BDF2EB29C1BCA50028DEBF /* TODOTextField.swift */,
-				46BDF2ED29C1BDC50028DEBF /* CustomTextEditor.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";

@@ -31,8 +31,6 @@ struct AddTODOLogo: View {
                 .font(.system(size: 25))
                 .fontWeight(.semibold)
         }
-        
-
 
     }
 }
