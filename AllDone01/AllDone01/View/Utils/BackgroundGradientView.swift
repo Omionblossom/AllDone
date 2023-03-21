@@ -10,8 +10,14 @@ import SwiftUI
 struct BackgroundGradientView: View {
     var body: some View {
 
-        LinearGradient(gradient: Gradient(colors: [Color.gray, Color.white.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
+        // testing stylish colorful grading
+        LinearGradient(gradient: Gradient(colors: [Color.pink, Color.purple
+            .opacity(0.6)]), startPoint: .top, endPoint: .bottom)
             .ignoresSafeArea()
+
+//        LinearGradient(gradient: Gradient(colors: [Color.gray,    Color.white.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
+//            .ignoresSafeArea()
+//  Original gray gradient background (Cool)
     }
 }
 

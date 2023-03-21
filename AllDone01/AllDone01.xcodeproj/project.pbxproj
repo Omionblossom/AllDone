@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46057A2C29C6EAFF00FF76A4 /* DashboardTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46057A2B29C6EAFF00FF76A4 /* DashboardTestView.swift */; };
+		46057A3229C701AB00FF76A4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46057A3129C701AB00FF76A4 /* DataManager.swift */; };
+		46057A3529C7029200FF76A4 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46057A3429C7029100FF76A4 /* AppConfig.swift */; };
+		4655A4E729C97ECA00C69B8C /* CheckInBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4E629C97ECA00C69B8C /* CheckInBannerView.swift */; };
+		4655A4EB29C9AECF00C69B8C /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4EA29C9AECF00C69B8C /* EmptyListView.swift */; };
 		46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */; };
 		46BDF27229BC63BC0028DEBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF27129BC63BC0028DEBF /* ContentView.swift */; };
 		46BDF27429BC63BE0028DEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BDF27329BC63BE0028DEBF /* Assets.xcassets */; };
@@ -70,6 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46057A2B29C6EAFF00FF76A4 /* DashboardTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTestView.swift; sourceTree = "<group>"; };
+		46057A3129C701AB00FF76A4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		46057A3429C7029100FF76A4 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		4655A4E629C97ECA00C69B8C /* CheckInBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInBannerView.swift; sourceTree = "<group>"; };
+		4655A4EA29C9AECF00C69B8C /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		46BDF26C29BC63BC0028DEBF /* AllDone01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllDone01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDone01App.swift; sourceTree = "<group>"; };
 		46BDF27129BC63BC0028DEBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46057A3329C7027F00FF76A4 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				46057A3429C7029100FF76A4 /* AppConfig.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		46BDF26329BC63BC0028DEBF = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +186,7 @@
 		46BDF26E29BC63BC0028DEBF /* AllDone01 */ = {
 			isa = PBXGroup;
 			children = (
+				46057A3329C7027F00FF76A4 /* Configurations */,
 				46BDF2C929BCC73A0028DEBF /* Utils */,
 				46BDF29B29BC73F70028DEBF /* Model */,
 				46BDF29929BC73D80028DEBF /* View */,
@@ -212,6 +231,8 @@
 				46BDF2A029BC75490028DEBF /* Authentication */,
 				46BDF2D929BCDA2D0028DEBF /* DashboardView.swift */,
 				46BDF2E529BF2CBE0028DEBF /* TODOView.swift */,
+				46BDF2E929BF36EC0028DEBF /* CreateTODOView.swift */,
+				46057A2B29C6EAFF00FF76A4 /* DashboardTestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +253,7 @@
 				46BDF2CE29BCCAEE0028DEBF /* TODO.swift */,
 				46BDF2D029BCCC830028DEBF /* selectedButton.swift */,
 				46BDF2D529BCD0EA0028DEBF /* MockData.swift */,
+				46057A3129C701AB00FF76A4 /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,8 +269,9 @@
 				46BDF2DF29BF268F0028DEBF /* TODOButtonStack.swift */,
 				46BDF2E329BF2A8C0028DEBF /* AddTODOLogo.swift */,
 				46BDF2E729BF36680028DEBF /* BlankView.swift */,
-				46BDF2E929BF36EC0028DEBF /* CreateTODOView.swift */,
 				46BDF2ED29C1BDC50028DEBF /* CustomTextEditor.swift */,
+				4655A4E629C97ECA00C69B8C /* CheckInBannerView.swift */,
+				4655A4EA29C9AECF00C69B8C /* EmptyListView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -436,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46BDF2CD29BCC88C0028DEBF /* AppUser.swift in Sources */,
+				46057A3229C701AB00FF76A4 /* DataManager.swift in Sources */,
 				46BDF2AD29BC84C30028DEBF /* EmailTextField.swift in Sources */,
 				46BDF2EA29BF36EC0028DEBF /* CreateTODOView.swift in Sources */,
 				46BDF2E629BF2CBE0028DEBF /* TODOView.swift in Sources */,
@@ -450,12 +474,16 @@
 				46BDF2D829BCD29D0028DEBF /* AuthViewModel.swift in Sources */,
 				46BDF2E029BF268F0028DEBF /* TODOButtonStack.swift in Sources */,
 				46BDF2DE29BEFE360028DEBF /* SearchBarView.swift in Sources */,
+				4655A4EB29C9AECF00C69B8C /* EmptyListView.swift in Sources */,
 				46BDF2A629BC79AC0028DEBF /* LogoView.swift in Sources */,
 				46BDF2EE29C1BDC50028DEBF /* CustomTextEditor.swift in Sources */,
+				46057A3529C7029200FF76A4 /* AppConfig.swift in Sources */,
 				46BDF2B129BC8DC90028DEBF /* PasswordSecureField.swift in Sources */,
 				46BDF29D29BC74C00028DEBF /* LoginView.swift in Sources */,
+				46057A2C29C6EAFF00FF76A4 /* DashboardTestView.swift in Sources */,
 				46BDF2CB29BCC7600028DEBF /* Constants.swift in Sources */,
 				46BDF2B329BC93570028DEBF /* AuthenticateButtonView.swift in Sources */,
+				4655A4E729C97ECA00C69B8C /* CheckInBannerView.swift in Sources */,
 				46BDF27229BC63BC0028DEBF /* ContentView.swift in Sources */,
 				46BDF2DC29BEF53C0028DEBF /* TODOViewModel.swift in Sources */,
 				46BDF2A429BC76FE0028DEBF /* BackgroundGradientView.swift in Sources */,
