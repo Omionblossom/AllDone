@@ -63,19 +63,19 @@ struct DashboardTestView: View {
                 switch selectedTab {
                 case .home:
                     HeaderCalendarView
-                    DashboardView(user: appUser01)
+//                    DashboardView(user: appUser01)
 //                    HomeTabView().environmentObject(manager)
                 case .stats:
                     HeaderCalendarView
-                    DashboardView(user: appUser01)
+//                    DashboardView(user: appUser01)
 //                    StatsTabView().environmentObject(manager)
                 case .quotes:
                     HeaderCalendarView
-                    DashboardView(user: appUser01)
+//                    DashboardView(user: appUser01)
 //                    QuotesTabView().environmentObject(manager)
                 case .settings:
                     HeaderCalendarView
-                    DashboardView(user: appUser01)
+//                    DashboardView(user: appUser01)
 //                    SettingsTabView().environmentObject(manager)
                 }
             }
