@@ -55,7 +55,9 @@ class AuthViewModel: ObservableObject {
             let data = ["uid": user.uid,
                         "firstName": firstName,
                         "lastName": lastName,
-                        "email": email]
+                        "email": email,
+                        //"records": records // ここにSubcollectionを指定して、.setDataしたら出来るかと思って見ましたが先に進めません
+            ]
             
             COLLECTION_USERS.document(user.uid).setData(data) { _ in
                 print("Successfully uploaded data")
@@ -63,8 +65,6 @@ class AuthViewModel: ObservableObject {
                 self.fetchUser()
             }
         }
-        
-        
     }
     
     func signout() {
