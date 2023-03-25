@@ -9,7 +9,12 @@ import SwiftUI
 
 struct TabAView: View {
     var body: some View {
-        Text("This is Tab A")
+        VStack{
+            Text("This is Header")
+            Spacer()
+            Text("This is Tab A")
+            Spacer()
+        }
     }
 }
 

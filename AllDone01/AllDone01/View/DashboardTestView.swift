@@ -35,11 +35,12 @@ struct DashboardTestView: View {
         ZStack {
             BackgroundGradientView()
             VStack {
+                HeaderTitle
                 HeaderCalendarView(days: [], selectedDate: Date(), onTapGesture: { _ in
                 })
-            }
-            HomeTabView()
-            }
+                HomeTabView()
+            } // end of VStack
+        } // end of ZStack
         }
             //                Color("BackgroundColor").ignoresSafeArea()
             //            CustomTabBarContainer
@@ -93,7 +94,9 @@ struct DashboardTestView: View {
     private var HeaderTitle: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text("Date here")
+                Text("Day, YYYY/MM/DD")
+                Text("Daily Records")
+                    .font(.largeTitle).bold()
                 //                Text(manager.selectedDate.headerTitle)
 //                Text(selectedTab.headerTitle).font(.largeTitle).bold()
             }
@@ -206,11 +209,13 @@ struct DashboardTestView_Previews: PreviewProvider {
                 //            DashboardTestView()
                 BackgroundGradientView()
                 VStack {
+                    HeaderTitle
                     HeaderCalendarView(days: days, selectedDate:Date(), onTapGesture: {
                         _ in
                     } )
                     HomeTabView()
                 }
+                
                 //            TabView {
                 //                HomeTabView()
                 //                    .tabItem{
@@ -224,7 +229,7 @@ struct DashboardTestView_Previews: PreviewProvider {
                 //                    .tabItem{
                 //                        Label("Detail", systemImage: "list.dash")
                 //                    }
-            }
+            } // end of ZStack
             //        DashboardTestView()
             //        DashboardTestView().environmentObject(DataManager(preview: true))
         }

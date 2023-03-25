@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabBView: View {
     var body: some View {
-        Text("This is Tab B")
+        Text("Your Statistics: coming soon!")
     }
 }
 

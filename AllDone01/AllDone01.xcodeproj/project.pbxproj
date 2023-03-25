@@ -20,6 +20,10 @@
 		4655A4FE29CEB92300C69B8C /* TabAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4FD29CEB92300C69B8C /* TabAView.swift */; };
 		4655A50029CEB92E00C69B8C /* TabBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4FF29CEB92E00C69B8C /* TabBView.swift */; };
 		4655A50429CEC31200C69B8C /* MainWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50329CEC31200C69B8C /* MainWindowView.swift */; };
+		4655A50629CF021100C69B8C /* JournalEntryCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50529CF021100C69B8C /* JournalEntryCreatorView.swift */; };
+		4655A50829CF3B6100C69B8C /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50729CF3B6100C69B8C /* EntryViewModel.swift */; };
+		4655A50A29CF4B3800C69B8C /* EntryTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50929CF4B3800C69B8C /* EntryTabView.swift */; };
+		4655A50C29CF4FB100C69B8C /* ValueInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50B29CF4FB100C69B8C /* ValueInputField.swift */; };
 		46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */; };
 		46BDF27229BC63BC0028DEBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF27129BC63BC0028DEBF /* ContentView.swift */; };
 		46BDF27429BC63BE0028DEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BDF27329BC63BE0028DEBF /* Assets.xcassets */; };
@@ -96,6 +100,10 @@
 		4655A4FD29CEB92300C69B8C /* TabAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAView.swift; sourceTree = "<group>"; };
 		4655A4FF29CEB92E00C69B8C /* TabBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBView.swift; sourceTree = "<group>"; };
 		4655A50329CEC31200C69B8C /* MainWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowView.swift; sourceTree = "<group>"; };
+		4655A50529CF021100C69B8C /* JournalEntryCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryCreatorView.swift; sourceTree = "<group>"; };
+		4655A50729CF3B6100C69B8C /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
+		4655A50929CF4B3800C69B8C /* EntryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTabView.swift; sourceTree = "<group>"; };
+		4655A50B29CF4FB100C69B8C /* ValueInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInputField.swift; sourceTree = "<group>"; };
 		46BDF26C29BC63BC0028DEBF /* AllDone01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllDone01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDone01App.swift; sourceTree = "<group>"; };
 		46BDF27129BC63BC0028DEBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -262,6 +270,7 @@
 				4655A4FD29CEB92300C69B8C /* TabAView.swift */,
 				4655A4FF29CEB92E00C69B8C /* TabBView.swift */,
 				4655A50329CEC31200C69B8C /* MainWindowView.swift */,
+				4655A50929CF4B3800C69B8C /* EntryTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 			children = (
 				46BDF2D729BCD29D0028DEBF /* AuthViewModel.swift */,
 				46BDF2DB29BEF53C0028DEBF /* TODOViewModel.swift */,
+				4655A50729CF3B6100C69B8C /* EntryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +314,7 @@
 				4655A4F429CB1E4700C69B8C /* CalendarItemCard.swift */,
 				4655A4F929CB20EB00C69B8C /* HeaderCalendarView.swift */,
 				4655A4FB29CD6B9200C69B8C /* HeaderTitle.swift */,
+				4655A50529CF021100C69B8C /* JournalEntryCreatorView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -326,6 +337,7 @@
 				46BDF2B029BC8DC90028DEBF /* PasswordSecureField.swift */,
 				46BDF2B429BC9AC60028DEBF /* UserTextField.swift */,
 				46BDF2EB29C1BCA50028DEBF /* TODOTextField.swift */,
+				4655A50B29CF4FB100C69B8C /* ValueInputField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -501,6 +513,7 @@
 				46BDF2B529BC9AC60028DEBF /* UserTextField.swift in Sources */,
 				46BDF2D129BCCC840028DEBF /* selectedButton.swift in Sources */,
 				46BDF2A229BC75720028DEBF /* SignupView.swift in Sources */,
+				4655A50C29CF4FB100C69B8C /* ValueInputField.swift in Sources */,
 				46BDF2CF29BCCAEE0028DEBF /* TODO.swift in Sources */,
 				4655A50429CEC31200C69B8C /* MainWindowView.swift in Sources */,
 				4655A4ED29C9B4E300C69B8C /* HomeTabView.swift in Sources */,
@@ -515,6 +528,7 @@
 				46BDF2A629BC79AC0028DEBF /* LogoView.swift in Sources */,
 				46BDF2EE29C1BDC50028DEBF /* CustomTextEditor.swift in Sources */,
 				46057A3529C7029200FF76A4 /* AppConfig.swift in Sources */,
+				4655A50A29CF4B3800C69B8C /* EntryTabView.swift in Sources */,
 				46BDF2B129BC8DC90028DEBF /* PasswordSecureField.swift in Sources */,
 				46BDF29D29BC74C00028DEBF /* LoginView.swift in Sources */,
 				46057A2C29C6EAFF00FF76A4 /* DashboardTestView.swift in Sources */,
@@ -528,6 +542,8 @@
 				46BDF2E829BF36680028DEBF /* BlankView.swift in Sources */,
 				46BDF2AF29BC884D0028DEBF /* CustomSecureField.swift in Sources */,
 				46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */,
+				4655A50829CF3B6100C69B8C /* EntryViewModel.swift in Sources */,
+				4655A50629CF021100C69B8C /* JournalEntryCreatorView.swift in Sources */,
 				46BDF2E429BF2A8C0028DEBF /* AddTODOLogo.swift in Sources */,
 				4655A4F829CB200200C69B8C /* DateExt.swift in Sources */,
 				4655A4FE29CEB92300C69B8C /* TabAView.swift in Sources */,

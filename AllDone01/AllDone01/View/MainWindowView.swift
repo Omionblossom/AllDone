@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct MainWindowView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+
     var body: some View {
-        TabView {
-            HomeTabView()
-                .tabItem{
-                    Label("Home", systemImage: "house")
-                }
-            TabAView()
-                .tabItem{
-                    Label("Add", systemImage: "plus.circle")
-                }
-            TabBView()
-                .tabItem{
-                    Label("Detail", systemImage: "list.dash")
-                }
-        }.padding(.bottom, 6)
+            TabView {
+                DashboardTestView()
+                    .tabItem{
+                        Label("Home", systemImage: "house")
+                    }
+                TabAView()
+                    .tabItem{
+                        Label("Add", systemImage: "plus.circle")
+                    }
+                TabBView()
+                    .tabItem{
+                        Label("Goals", systemImage: "list.dash")
+                    }
+            }.padding(.bottom, 6)
     }
 }
 

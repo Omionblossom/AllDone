@@ -29,8 +29,12 @@ struct CreateTODOView: View {
             TODOTextField(text: $title, placeholder: "Exercize...")
                 .padding([.horizontal, .bottom])
             
-            CustomTextEditor(text: $TODOdescription, placeholder: Text("Description..."), imageName: "line.3.horizontal", foregroundColor: .gray)
+//            CustomTextEditor(text: $TODOdescription, placeholder: Text("Description..."), imageName: "line.3.horizontal", foregroundColor: .gray)
+//                .padding([.horizontal, .bottom])
+
+            CustomTextField(text: $TODOdescription, placeholder: Text("Description..."), imageName: "line.3.horizontal", foregroundColor: .gray)
                 .padding([.horizontal, .bottom])
+
             
             HStack {
                 Button {
