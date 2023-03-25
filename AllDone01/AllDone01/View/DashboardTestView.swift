@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-// MARK: - Custom tab bar items
-enum CustomTabBarItem: String, Identifiable, CaseIterable {
-    case home = "house.fill", stats = "chart.bar.xaxis"
-    case quotes = "quote.closing", settings = "gearshape.fill"
-    var id: Int { hashValue }
-    
-    /// Custom header title for each tab
-    var headerTitle: String {
-        switch self {
-        case .home: return "Daily Records"// changed journal to records
-        case .stats: return "Fun Statistics"// unchanged
-        case .quotes: return "Get Inspired"// unchanged
-        case .settings: return "Settings"   // unchanged
-        }
-    }
-}
+//// MARK: - Custom tab bar items
+//enum CustomTabBarItem: String, Identifiable, CaseIterable {
+//    case home = "house.fill", stats = "chart.bar.xaxis"
+//    case quotes = "quote.closing", settings = "gearshape.fill"
+//    var id: Int { hashValue }
+//
+//    /// Custom header title for each tab
+//    var headerTitle: String {
+//        switch self {
+//        case .home: return "Daily Records"// changed journal to records
+//        case .stats: return "Fun Statistics"// unchanged
+//        case .quotes: return "Get Inspired"// unchanged
+//        case .settings: return "Settings"   // unchanged
+//        }
+//    }
+//}
 
 /// Main dashboard for the app
 struct DashboardTestView: View {
@@ -35,11 +35,12 @@ struct DashboardTestView: View {
         ZStack {
             BackgroundGradientView()
             VStack {
-//                HeaderCalendarView(days: HeaderCalendarView(days: [Date], selectedDate:Date(), onTapGesture: {
-//                    _ in
-//                } ))
-                HomeTabView()
+                HeaderCalendarView(days: [], selectedDate: Date(), onTapGesture: { _ in
+                })
             }
+            HomeTabView()
+            }
+        }
             //                Color("BackgroundColor").ignoresSafeArea()
             //            CustomTabBarContainer
 //            CustomTabBarView
@@ -59,7 +60,7 @@ struct DashboardTestView: View {
 //        }
         //        }
         
-    }
+//    }
     
     /// Custom tab bar container
     private var CustomTabBarContainer: some View {
@@ -87,7 +88,6 @@ struct DashboardTestView: View {
                 }
             }
         } //.animation(nil)
-    }
     
     /// Header title
     private var HeaderTitle: some View {
@@ -202,16 +202,30 @@ struct DashboardTestView_Previews: PreviewProvider {
             Calendar.current.date(byAdding: .day, value:8, to:day
                                  )!,
         ]
-        ZStack {
-            BackgroundGradientView()
-            VStack {
-                HeaderCalendarView(days: days, selectedDate:Date(), onTapGesture: {
-                    _ in
-                } )
-                HomeTabView()
+            ZStack {
+                //            DashboardTestView()
+                BackgroundGradientView()
+                VStack {
+                    HeaderCalendarView(days: days, selectedDate:Date(), onTapGesture: {
+                        _ in
+                    } )
+                    HomeTabView()
+                }
+                //            TabView {
+                //                HomeTabView()
+                //                    .tabItem{
+                //                        Label("Home", systemImage: "house")
+                //                    }
+                //                TabAView()
+                //                    .tabItem{
+                //                        Label("Add", systemImage: "plus.circle")
+                //                    }
+                //                TabBView()
+                //                    .tabItem{
+                //                        Label("Detail", systemImage: "list.dash")
+                //                    }
             }
             //        DashboardTestView()
             //        DashboardTestView().environmentObject(DataManager(preview: true))
         }
     }
-}

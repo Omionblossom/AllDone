@@ -7,34 +7,41 @@
 
 import SwiftUI
 
-
-struct HeaderTitle: View {
+    // MARK: - Custom tab bar items
+enum CustomTabBarItem: String, Identifiable, CaseIterable {
+    case home = "house.fill", stats = "chart.bar.xaxis"
+    case quotes = "quote.closing", settings = "gearshape.fill"
+    var id: Int { hashValue }
     
-    var selectedDate: Date
-    var selectedTab: String
-    /// Custom header title for each tab
-    var headerTitle: String {
-        switch self {
-        case .home: return "Daily Journal"
-        case .stats: return "Fun Statistics"
-        case .quotes: return "Get Inspired"
-        case .settings: return "Settings"
-        }
-    }
+    //        struct HeaderTitle: View {
+    //
+    //            var selectedDate: Date
+    //            var selectedTab: String
+    //            /// Custom header title for each tab
+    //            var headerTitle: String {
+    //                switch self {
+    //                case .home: return "Daily Journal"
+    //                case .stats: return "Fun Statistics"
+    //                case .quotes: return "Get Inspired"
+    //                case .settings: return "Settings"
+    //                }
+    //            }
     
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text(selectedDate.headerTitle)
-                Text(selectedTab.headerTitle).font(.largeTitle).bold()
+                //                        Text(selectedDate.headerTitle)
+                //                        Text(selectedTab.headerTitle).font(.largeTitle).bold()
             }
             Spacer()
         }.padding(.horizontal).foregroundColor(Color("LightColor"))
     }
     
-    struct HeaderTitle_Previews: PreviewProvider {
-        static var previews: some View {
-            HeaderTitle(selectedDate: Date(), selectedTab: "Daily Journal")
-        }
-    }
+    //            struct HeaderTitle_Previews: PreviewProvider {
+    //                static var previews: some View {
+    //                    HeaderTitle(selectedDate: Date(), selectedTab: "Daily Journal")
+    //                }
+    //            }
+    //        }
+    //    }
 }

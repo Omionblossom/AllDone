@@ -100,7 +100,6 @@ struct DashboardView: View {
                 CreateTODOView(user: user, viewModel: viewModel)
             }
             
-            
         } // end of Zstack
         
 //        VStack {

@@ -11,18 +11,19 @@ struct HomeTabView: View {
     // MARK: - Main rendering function
     var body: some View {
         ZStack {
+//            BackgroundGradientView().ignoresSafeArea()
             RoundedCorner(radius: 30, corners: [.topLeft, .topRight])
                 .foregroundColor(Color("ListColor")).ignoresSafeArea()
-            VStack(spacing: 0){
-                Capsule().frame(width: 50, height: 5).padding(12)
-                    .foregroundColor(Color("DarkColor"))
-                Spacer()
-                
-                // Temporarily set up with CheckInBannerView and EmptyListView
-                VStack{
-                    CheckInBanner1View
-                    EmptyList1View
+                VStack(spacing: 0){
+                    Capsule().frame(width: 50, height: 5).padding(12)
+                        .foregroundColor(Color("DarkColor"))
                     Spacer()
+                    
+                    // Temporarily set up with CheckInBannerView and EmptyListView
+                    VStack{
+                        CheckInBanner1View
+                        EmptyList1View
+                        Spacer()
                 }
 // Not yet DB available so crossing it out 後でIf文を完了してデータをロードし表示する
 //                if let entries = results.filter({ $0.date?.longFormat == manager.selectedDate.longFormat }), entries.count > 0 {
@@ -97,6 +98,19 @@ private var EmptyList1View: some View {
             }.frame(width: 88, height: 42)
         }.padding(.top, 20)
         Spacer()
+    }.multilineTextAlignment(.center).foregroundColor(Color("TextColor"))
+}
+
+/// Empty view
+private var HomeTabHeader: some View {
+    ZStack {
+        HStack(alignment: .top) {
+            VStack(alignment: .leading) {
+                Text("HeaderHere")
+                Text("HeaderSubtextHere").font(.largeTitle).bold()
+            }
+        }.padding(.horizontal).foregroundColor(Color("LightColor"))
+
     }.multilineTextAlignment(.center).foregroundColor(Color("TextColor"))
 }
 

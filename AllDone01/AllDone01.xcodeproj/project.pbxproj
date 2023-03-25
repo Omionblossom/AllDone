@@ -17,6 +17,9 @@
 		4655A4F829CB200200C69B8C /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4F729CB200200C69B8C /* DateExt.swift */; };
 		4655A4FA29CB20EB00C69B8C /* HeaderCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4F929CB20EB00C69B8C /* HeaderCalendarView.swift */; };
 		4655A4FC29CD6B9200C69B8C /* HeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4FB29CD6B9200C69B8C /* HeaderTitle.swift */; };
+		4655A4FE29CEB92300C69B8C /* TabAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4FD29CEB92300C69B8C /* TabAView.swift */; };
+		4655A50029CEB92E00C69B8C /* TabBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A4FF29CEB92E00C69B8C /* TabBView.swift */; };
+		4655A50429CEC31200C69B8C /* MainWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50329CEC31200C69B8C /* MainWindowView.swift */; };
 		46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */; };
 		46BDF27229BC63BC0028DEBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF27129BC63BC0028DEBF /* ContentView.swift */; };
 		46BDF27429BC63BE0028DEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BDF27329BC63BE0028DEBF /* Assets.xcassets */; };
@@ -90,6 +93,9 @@
 		4655A4F729CB200200C69B8C /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		4655A4F929CB20EB00C69B8C /* HeaderCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCalendarView.swift; sourceTree = "<group>"; };
 		4655A4FB29CD6B9200C69B8C /* HeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitle.swift; sourceTree = "<group>"; };
+		4655A4FD29CEB92300C69B8C /* TabAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabAView.swift; sourceTree = "<group>"; };
+		4655A4FF29CEB92E00C69B8C /* TabBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBView.swift; sourceTree = "<group>"; };
+		4655A50329CEC31200C69B8C /* MainWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowView.swift; sourceTree = "<group>"; };
 		46BDF26C29BC63BC0028DEBF /* AllDone01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllDone01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDone01App.swift; sourceTree = "<group>"; };
 		46BDF27129BC63BC0028DEBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -253,6 +259,9 @@
 				46BDF2E929BF36EC0028DEBF /* CreateTODOView.swift */,
 				46057A2B29C6EAFF00FF76A4 /* DashboardTestView.swift */,
 				4655A4EC29C9B4E300C69B8C /* HomeTabView.swift */,
+				4655A4FD29CEB92300C69B8C /* TabAView.swift */,
+				4655A4FF29CEB92E00C69B8C /* TabBView.swift */,
+				4655A50329CEC31200C69B8C /* MainWindowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -486,12 +495,14 @@
 				46BDF2AD29BC84C30028DEBF /* EmailTextField.swift in Sources */,
 				46BDF2EA29BF36EC0028DEBF /* CreateTODOView.swift in Sources */,
 				46BDF2E629BF2CBE0028DEBF /* TODOView.swift in Sources */,
+				4655A50029CEB92E00C69B8C /* TabBView.swift in Sources */,
 				46BDF2A829BC7DDE0028DEBF /* CustomTextField.swift in Sources */,
 				46BDF2D629BCD0EB0028DEBF /* MockData.swift in Sources */,
 				46BDF2B529BC9AC60028DEBF /* UserTextField.swift in Sources */,
 				46BDF2D129BCCC840028DEBF /* selectedButton.swift in Sources */,
 				46BDF2A229BC75720028DEBF /* SignupView.swift in Sources */,
 				46BDF2CF29BCCAEE0028DEBF /* TODO.swift in Sources */,
+				4655A50429CEC31200C69B8C /* MainWindowView.swift in Sources */,
 				4655A4ED29C9B4E300C69B8C /* HomeTabView.swift in Sources */,
 				46BDF2DA29BCDA2D0028DEBF /* DashboardView.swift in Sources */,
 				46BDF2EC29C1BCA50028DEBF /* TODOTextField.swift in Sources */,
@@ -519,6 +530,7 @@
 				46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */,
 				46BDF2E429BF2A8C0028DEBF /* AddTODOLogo.swift in Sources */,
 				4655A4F829CB200200C69B8C /* DateExt.swift in Sources */,
+				4655A4FE29CEB92300C69B8C /* TabAView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
