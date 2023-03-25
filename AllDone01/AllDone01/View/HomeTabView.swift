@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeTabView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel2: EntryViewModel
+    
     // MARK: - Main rendering function
     var body: some View {
         ZStack {
@@ -60,6 +64,7 @@ private var CheckInBanner1View: some View {
                 }.foregroundColor(Color("LightColor"))
                 Spacer()
                 Button {
+//                    EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
                     // Set up next view to move on
                     //manager.fullScreenMode = .entryCreator
                 } label: {
@@ -85,6 +90,7 @@ private var EmptyList1View: some View {
             .font(.subheadline).opacity(0.6)
         //            Spacer()
         Button {
+//            EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
             // Set up next view to move on
             //manager.fullScreenMode = .entryCreator
         } label: {

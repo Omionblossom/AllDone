@@ -13,6 +13,7 @@ struct TabAView: View {
             Text("This is Header")
             Spacer()
             Text("This is Tab A")
+            Text("Analytics are COMING SOON")
             Spacer()
         }
     }

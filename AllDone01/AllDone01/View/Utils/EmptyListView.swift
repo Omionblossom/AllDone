@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct EmptyListView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel2: EntryViewModel
+    
     var body: some View {
         VStack {
             Spacer()
@@ -17,6 +21,7 @@ struct EmptyListView: View {
                 .font(.subheadline).opacity(0.6)
 //            Spacer()
             Button {
+//                EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
                 // Set up next view to move on
                 //manager.fullScreenMode = .entryCreator
             } label: {

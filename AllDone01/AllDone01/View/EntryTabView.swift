@@ -41,15 +41,18 @@ struct EntryTabView: View {
                         .frame(width: UIScreen.main.bounds.size.width - 50)
                     
                     HStack(alignment: .center) {
-                        ValueInputField(imageName: "dumbbell.fill")
+                        ValueInputField(imageName: "dumbbell.fill").foregroundColor(.black)
                         Text("kg")
                         Text("x")
                         ValueInputField(imageName: "square.stack.3d.up")
+                            .foregroundColor(.black)
                         Text("times")
                     }
+                    .foregroundColor(.gray)
                     .padding(.horizontal)
                     .frame(width: UIScreen.main.bounds.size.width - 70)
-                    
+
+
                     Button {
                         viewModel2.onTapEntry()
                     } label: {

@@ -30,11 +30,11 @@ struct ContentView: View {
                             .tabItem{
                                 Label("Home", systemImage: "list.bullet.circle")
                             }
-                        TabAView()
+                        EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
                             .tabItem{
                                 Label("Add", systemImage: "plus.circle")
                             }
-                        EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
+                        TabAView()
                             .tabItem{
                                 Label("Goals", systemImage: "list.dash")
                             }
