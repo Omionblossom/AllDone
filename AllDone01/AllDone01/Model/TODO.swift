@@ -32,7 +32,7 @@ struct TODO: Identifiable, Decodable {
             return .shoulder
         } else if TODOType == "Arms" {
             return .arms
-        } else if TODOType == "Exercize" {
+        } else if TODOType == "Exercise" {
             return .exercize
         } else if TODOType == "Run" {
             return .run

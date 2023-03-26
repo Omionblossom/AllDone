@@ -28,7 +28,7 @@ struct ContentView: View {
                             }
                         DashboardView(user: user)
                             .tabItem{
-                                Label("Home", systemImage: "list.bullet.circle")
+                                Label("TODO", systemImage: "list.bullet.circle")
                             }
                         EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
                             .tabItem{

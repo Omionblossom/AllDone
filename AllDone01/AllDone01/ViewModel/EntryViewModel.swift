@@ -26,6 +26,8 @@ class EntryViewModel: ObservableObject {
         }
         
     }
+
+
 //
 //    func uploadTODOs(todo: TODO) {
 //        guard let user = AuthViewModel.shared.currentUser else { return }

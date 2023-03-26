@@ -10,22 +10,14 @@ import Foundation
 
 /// Generic configurations for the app
 class AppConfig {
-    
-    /// This is the AdMob Interstitial ad id
-    /// Test App ID: ca-app-pub-3940256099942544~1458002511
-    static let adMobAdId: String = "ca-app-pub-3940256099942544/4411468910"
-    
-    // MARK: - Settings flow items
-    static let emailSupport = "support@apps4world.com"
-    static let privacyURL: URL = URL(string: "https://www.google.com/")!
-    static let termsAndConditionsURL: URL = URL(string: "https://www.google.com/")!
-    static let yourAppURL: URL = URL(string: "https://apps.apple.com/app/idXXXXXXXXX")!
+        
+    // MARK: - Settings flow items  // future use
+//    static let privacyURL: URL = URL(string: "https://www.google.com/")!
+//    static let termsAndConditionsURL: URL = URL(string: "https://www.google.com/")!
+//    static let yourAppURL: URL = URL(string: "https://apps.apple.com/app/idXXXXXXXXX")!
     
     // MARK: - Generic configurations
     static let headerTitleDaysCount: Int = 10
-    
-    // MARK: - In App Purchases
-    static let premiumVersion: String = "DailyJournal.Premium"
 }
 
 // MARK: - Mood Level Configurations
@@ -33,19 +25,19 @@ enum MoodLevel: Int, CaseIterable, Identifiable {
     case level1 = 1, level2, level3, level4, level5
     var id: Int { hashValue }
     
-    /// Mood text options
+    /// Mood text options  // use it for Frequently used exercise names
     var moodOptions: [String] {
         switch self {
-        case .level1:
-            return ["Angry", "Anxious", "Disgusted", "Embarrassed", "Fearful", "Frustrated"]
-        case .level2:
-            return ["Annoyed", "Insecure", "Jealous", "Lonely", "Nervous", "Sad"]
-        case .level3:
-            return ["Awkward", "Bored", "Busy", "Confused", "Desire", "Impatient", "Tired"]
-        case .level4:
-            return ["Appreciated", "Calm", "Curious", "Grateful", "Inspired", "Motivated", "Satisfied"]
-        case .level5:
-            return ["Brave", "Confident", "Creative", "Excited", "Free", "Happy", "Love", "Proud", "Respected"]
+        case .level1:  // chest
+            return ["Bench Press", "Inclined Bench Press", "Dumbbel fly", "Inclined Dumbbel fly", "wire fly", "push ups"]
+        case .level2:  // back
+            return ["Chinning", "Supported Chinning", "Lat Pull Down", "Dead Lift", "Hex bar Dead Lift", "Dumbbel Rowing", "Cable Rowing", "One-sided Dumbbel Rowing"]
+        case .level3:  // legs
+            return ["Squat", "Sqaut own weight", "Front Lunge", "Dumbbel Back Lunge", "Leg Press", "Leg Curl"]
+        case .level4:  // shoulders and arms
+            return ["Shoulder Fly", "Shoulder Press", "Shoulder Dumbbel Press", "Front Deltoid Raise", "Back Deltoid Raise", "Cable shoulder fly", "One-handed Shoulder Fly"]
+        case .level5:  // others
+            return ["Regular Crunch", "Bycicle Crunch", "Toe Touch", "Toe Touch Cross", "Russian Twist", "Plank", "Burpee"]
         }
     }
     

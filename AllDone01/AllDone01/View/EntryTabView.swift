@@ -41,19 +41,22 @@ struct EntryTabView: View {
                         .frame(width: UIScreen.main.bounds.size.width - 50)
                     
                     HStack(alignment: .center) {
-                        ValueInputField(imageName: "dumbbell.fill").foregroundColor(.black)
+                        ZStack{
+                            ValueInputField(imageName: "dumbbell.fill").foregroundColor(.black)
+                        }
                         Text("kg")
                         Text("x")
-                        ValueInputField(imageName: "square.stack.3d.up")
-                            .foregroundColor(.black)
+                        ZStack{
+                            ValueInputField(imageName: "square.stack.3d.up")
+                                .foregroundColor(.black)
+                        }
                         Text("times")
                     }
                     .foregroundColor(.gray)
                     .padding(.horizontal)
                     .frame(width: UIScreen.main.bounds.size.width - 70)
 
-
-                    Button {
+                    Button {   // Record entry action -> EntryViewModel
                         viewModel2.onTapEntry()
                     } label: {
                         EntryRegisterButton()
@@ -63,17 +66,11 @@ struct EntryTabView: View {
                 Spacer()
             } // end of VStack
         } // end of ZStack
-        
-        
-        //        .frame(width: UIScreen.main.bounds.size.width - 100, height: 360)
-        //        .background(Color(.systemGray5))
-        //        .cornerRadius(25)
     }
     
     struct EntryTabView_Previews: PreviewProvider {
         static var previews: some View {
             EntryTabView(user: appUser01, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
-            
         }
     }
     
@@ -90,7 +87,7 @@ struct EntryTabView: View {
     
     struct EntryRegisterButton: View {
         var body: some View {
-            Text ("Create")
+            Text ("Record entry")
                 .font(.headline)
                 .foregroundColor(.white)
                 .frame(width: UIScreen.main.bounds.size.width - 140, height: 40)
