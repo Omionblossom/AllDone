@@ -14,8 +14,8 @@ struct Exercise: Identifiable, Decodable {
     @DocumentID var id: String? = UUID().uuidString   // unique to TODO
     var exercise: String
     var date = Date()
-    var weight = 0.0
-    var reps = 0
+    var weight: Double
+    var reps: Int
     var ExerciseType: String
     
     func getExerciseType() -> selectedButton {

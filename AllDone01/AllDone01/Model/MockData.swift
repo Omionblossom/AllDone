@@ -13,3 +13,4 @@ let todo01 = TODO(id: "1", ownerUid: "1", title: "tomatoes", description: "Must 
 let todo02 = TODO(id: "2", ownerUid: "2", title: "meat", description: "Clean meat", TODOType: "Chest", completed: true)
 let todo03 = TODO(id: "3", ownerUid: "3", title: "Do homework", description: "", TODOType: "Legs", completed: false)
 
+let exercise01 = Exercise(id: "111", exercise: "Benchpress", weight: 100, reps: 5, ExerciseType: "chest")

@@ -13,10 +13,10 @@ class EntryViewModel: ObservableObject {
     func onTapEntry() {
         guard let user = Auth.auth().currentUser else { return }
         
-        let data: [String: Any] = ["exercise": "",
+        let data: [String: Any] = ["exercise": state.exercise.uppercased(),
                                    "date": Date(),
-                                   "weight": 0.0,
-                                   "reps": 0]
+                                   "weight": state.weight,
+                                   "reps": state.reps]
         
         COLLECTION_USERS.document(user.uid).collection("records").addDocument(data: data) { error in
             if let error = error {
@@ -25,6 +25,30 @@ class EntryViewModel: ObservableObject {
             }
         }
         
+    }
+    
+    @Published var showExerciseEntryView: Bool = false   // pop up control
+    @Published var state: State = State(weight: 20, reps: 10, exercise: "")  // プロパティ名は小文字
+    
+    func onInputWeight(_ weight: String) {
+        guard let weight = Double(weight) else { return }
+        state.weight = weight
+    }
+    
+    func onInputReps(_ reps: String) {
+        guard let reps = Int(reps) else { return }
+        state.reps = reps
+    }
+
+    func onInputExercise(_ exercise: String) {
+        state.exercise = exercise
+    }
+    
+    struct State {
+        var weight: Double
+        var reps: Int
+        var exercise: String
+            
     }
 
 

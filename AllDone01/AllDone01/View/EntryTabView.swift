@@ -11,61 +11,101 @@ struct EntryTabView: View {
     
     let user: AppUser
     
-    @State var exercise: String = ""
-    @State var date = Date()
-    @State var weight: Float = 0.0
-    @State var reps: Int = 0
-    
     @ObservedObject var viewModel: TODOViewModel
     @ObservedObject var viewModel2: EntryViewModel
     
     var body: some View {
-        ZStack{
-        RoundedCorner(radius: 30, corners: [.topLeft, .topRight])
-            .padding(.top, 6)
-            .foregroundColor(Color("ListColor")).ignoresSafeArea()
-        VStack(spacing: 0){
-            Capsule().frame(width: 50, height: 5).padding(12)
-                .foregroundColor(Color("DarkColor"))
-//            Spacer()
-            
-            
-//            ZStack{
-                VStack {
-                    TODOButtonStack(viewModel: viewModel)
-                        .padding()
-                        .padding(.top)
-                    EntryTabBackground()
-                    TODOTextField(text: $exercise, placeholder: "Exercise...")
-                        .padding([.horizontal, .bottom])
-                        .frame(width: UIScreen.main.bounds.size.width - 50)
-                    
-                    HStack(alignment: .center) {
-                        ZStack{
-                            ValueInputField(imageName: "dumbbell.fill").foregroundColor(.black)
-                        }
-                        Text("kg")
-                        Text("x")
-                        ZStack{
-                            ValueInputField(imageName: "square.stack.3d.up")
-                                .foregroundColor(.black)
-                        }
-                        Text("times")
-                    }
-                    .foregroundColor(.gray)
-                    .padding(.horizontal)
-                    .frame(width: UIScreen.main.bounds.size.width - 70)
+        ZStack {
+            BackgroundGradientView()
+            VStack {
+                HeaderTitle
+                ZStack{
+                RoundedCorner(radius: 30, corners: [.topLeft, .topRight])
+                    .padding(.top, 6)
+                    .foregroundColor(Color("ListColor")).ignoresSafeArea()
+                VStack(spacing: 0){
+                    Capsule().frame(width: 50, height: 5).padding(12)
+                        .foregroundColor(Color("DarkColor"))
+        //            ZStack{
+                        VStack {
+                            ExerciseEntryView(user: user, viewModel2: EntryViewModel())
+//                            TODOButtonStack(viewModel: viewModel)
+//                                .padding()
+//                                .padding(.top)
+//                            EntryTabBackground()
+                            HStack {
+                                TextField("Enter Exercise", text: .init(get: {
+                                    "\(viewModel2.state.exercise)"
+                                }, set: {
+                                    viewModel2.onInputExercise($0)
+                                }))
+                                Button {
+                                    viewModel2.showExerciseEntryView = true
+                                } label: {
+                                    Image(systemName: "text.book.closed")
+                                        .padding(.trailing, 12)
+                                        .foregroundColor(Color(.systemPink))
+                                }
 
-                    Button {   // Record entry action -> EntryViewModel
-                        viewModel2.onTapEntry()
-                    } label: {
-                        EntryRegisterButton()
-                    }
+                            }
+                            .padding([.horizontal, .bottom])
+                            .frame(width: UIScreen.main.bounds.size.width - 50)
+
+                            
+                            HStack(alignment: .center) {
+                                Image(systemName: "dumbbell.fill")
+                                TextField("", text: .init(get: {
+                                    "\(viewModel2.state.weight)"
+                                }, set: {
+                                    viewModel2.onInputWeight($0)
+                                }))
+                                Text("kg")
+                                Text("x")
+                                Image(systemName: "square.stack.3d.up")
+                                TextField("", text: .init(get: {
+                                    "\(viewModel2.state.reps)"
+                                }, set: {
+                                    viewModel2.onInputReps($0)
+                                }))
+                                Text("reps")
+                            }
+                            .foregroundColor(.gray)
+                            .padding(.horizontal)
+                            .frame(width: UIScreen.main.bounds.size.width - 70)
+
+                            Button {   // Record entry action -> EntryViewModel
+                                viewModel2.onTapEntry()
+                            } label: {
+                                EntryRegisterButton()
+                            }
+                        }
+                        .padding(.bottom, 10)
+                        Spacer()
+                    } // end of VStack
+                    
+        //            if $viewModel2.showExerciseEntryView {
+        //                BlankView()
+        //                ExerciseEntryView(user: user, viewModel2: viewModel2)
                 }
-                .padding(.bottom, 10)
-                Spacer()
-            } // end of VStack
+            }
+        }
+            
         } // end of ZStack
+    
+    /// Header title
+    private var HeaderTitle: some View {
+        HStack(alignment: .top) {
+            VStack(alignment: .leading) {
+                Text("Day, YYYY/MM/DD")
+                Text("Register Records")
+                    .font(.largeTitle).bold()
+                //                Text(manager.selectedDate.headerTitle)
+//                Text(selectedTab.headerTitle).font(.largeTitle).bold()
+            }
+            Spacer()
+        }.padding(.horizontal).foregroundColor(Color("LightColor"))
+    }
+    
     }
     
     struct EntryTabView_Previews: PreviewProvider {
@@ -96,4 +136,4 @@ struct EntryTabView: View {
             
         }
     }
-}
+

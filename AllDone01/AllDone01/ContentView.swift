@@ -34,7 +34,8 @@ struct ContentView: View {
                             .tabItem{
                                 Label("Add", systemImage: "plus.circle")
                             }
-                        TabAView()
+                        ExerciseEntryView(user: user, viewModel2: EntryViewModel())
+//                        TabAView()
                             .tabItem{
                                 Label("Goals", systemImage: "list.dash")
                             }

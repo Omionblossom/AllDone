@@ -26,6 +26,9 @@
 		4655A50C29CF4FB100C69B8C /* ValueInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50B29CF4FB100C69B8C /* ValueInputField.swift */; };
 		4655A50E29CF690B00C69B8C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50D29CF690A00C69B8C /* Exercise.swift */; };
 		4655A51029D0098E00C69B8C /* MoodSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A50F29D0098E00C69B8C /* MoodSelectorView.swift */; };
+		4655A51229D0308000C69B8C /* ExerciseEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A51129D0308000C69B8C /* ExerciseEntryView.swift */; };
+		4655A51629D0485500C69B8C /* ShowRecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A51529D0485500C69B8C /* ShowRecordsViewModel.swift */; };
+		4655A51829D0534B00C69B8C /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655A51729D0534B00C69B8C /* RecordView.swift */; };
 		46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */; };
 		46BDF27229BC63BC0028DEBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDF27129BC63BC0028DEBF /* ContentView.swift */; };
 		46BDF27429BC63BE0028DEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BDF27329BC63BE0028DEBF /* Assets.xcassets */; };
@@ -108,6 +111,9 @@
 		4655A50B29CF4FB100C69B8C /* ValueInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueInputField.swift; sourceTree = "<group>"; };
 		4655A50D29CF690A00C69B8C /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		4655A50F29D0098E00C69B8C /* MoodSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectorView.swift; sourceTree = "<group>"; };
+		4655A51129D0308000C69B8C /* ExerciseEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseEntryView.swift; sourceTree = "<group>"; };
+		4655A51529D0485500C69B8C /* ShowRecordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecordsViewModel.swift; sourceTree = "<group>"; };
+		4655A51729D0534B00C69B8C /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		46BDF26C29BC63BC0028DEBF /* AllDone01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllDone01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BDF26F29BC63BC0028DEBF /* AllDone01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDone01App.swift; sourceTree = "<group>"; };
 		46BDF27129BC63BC0028DEBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -276,6 +282,7 @@
 				4655A50329CEC31200C69B8C /* MainWindowView.swift */,
 				4655A50929CF4B3800C69B8C /* EntryTabView.swift */,
 				4655A50F29D0098E00C69B8C /* MoodSelectorView.swift */,
+				4655A51729D0534B00C69B8C /* RecordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +293,7 @@
 				46BDF2D729BCD29D0028DEBF /* AuthViewModel.swift */,
 				46BDF2DB29BEF53C0028DEBF /* TODOViewModel.swift */,
 				4655A50729CF3B6100C69B8C /* EntryViewModel.swift */,
+				4655A51529D0485500C69B8C /* ShowRecordsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 				4655A4F929CB20EB00C69B8C /* HeaderCalendarView.swift */,
 				4655A4FB29CD6B9200C69B8C /* HeaderTitle.swift */,
 				4655A50529CF021100C69B8C /* JournalEntryCreatorView.swift */,
+				4655A51129D0308000C69B8C /* ExerciseEntryView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -515,6 +524,7 @@
 				46BDF2E629BF2CBE0028DEBF /* TODOView.swift in Sources */,
 				4655A50029CEB92E00C69B8C /* TabBView.swift in Sources */,
 				46BDF2A829BC7DDE0028DEBF /* CustomTextField.swift in Sources */,
+				4655A51229D0308000C69B8C /* ExerciseEntryView.swift in Sources */,
 				46BDF2D629BCD0EB0028DEBF /* MockData.swift in Sources */,
 				46BDF2B529BC9AC60028DEBF /* UserTextField.swift in Sources */,
 				46BDF2D129BCCC840028DEBF /* selectedButton.swift in Sources */,
@@ -530,6 +540,7 @@
 				46BDF2D829BCD29D0028DEBF /* AuthViewModel.swift in Sources */,
 				4655A4F529CB1E4700C69B8C /* CalendarItemCard.swift in Sources */,
 				46BDF2E029BF268F0028DEBF /* TODOButtonStack.swift in Sources */,
+				4655A51829D0534B00C69B8C /* RecordView.swift in Sources */,
 				46BDF2DE29BEFE360028DEBF /* SearchBarView.swift in Sources */,
 				4655A4EB29C9AECF00C69B8C /* EmptyListView.swift in Sources */,
 				4655A4FA29CB20EB00C69B8C /* HeaderCalendarView.swift in Sources */,
@@ -547,6 +558,7 @@
 				46BDF27229BC63BC0028DEBF /* ContentView.swift in Sources */,
 				46BDF2DC29BEF53C0028DEBF /* TODOViewModel.swift in Sources */,
 				46BDF2A429BC76FE0028DEBF /* BackgroundGradientView.swift in Sources */,
+				4655A51629D0485500C69B8C /* ShowRecordsViewModel.swift in Sources */,
 				46BDF2E829BF36680028DEBF /* BlankView.swift in Sources */,
 				46BDF2AF29BC884D0028DEBF /* CustomSecureField.swift in Sources */,
 				46BDF27029BC63BC0028DEBF /* AllDone01App.swift in Sources */,
