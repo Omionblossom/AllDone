@@ -22,12 +22,19 @@ class TODOViewModel: ObservableObject {
     func loadTODOs() {
         guard let user = AuthViewModel.shared.currentUser else { return }
         
-        let query = COLLECTION_USERS.document(user.id ?? "").collection("to-dos").order(by: "completed", descending: false)
+        let query = COLLECTION_USERS.document(user.uid ).collection("to-dos").order(by: "completed", descending: false)
         
         query.getDocuments { snapshot, _ in
             
             guard let documents = snapshot?.documents else { return }
-            self.todos = documents.compactMap({try? $0.data(as: TODO.self) })
+//            print("☀️")
+//            let data = documents.compactMap{ $0.data() }
+//            print(data)
+            
+//            self.todos = documents.compactMap({ try? $0.data(as: TODO.self) })
+//            print(self.todos)
+            self.todos = documents.compactMap({ try? $0.data(as: TODO.self) })
+//            print(self.todos)
             
             for index in stride(from: 0, to: self.todos.count, by: 1) {
                 self.todos[index].documentID = documents[index].documentID

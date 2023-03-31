@@ -7,36 +7,38 @@
 
 import Foundation
 import SwiftUI
-import FirebaseFirestoreSwift
+//import FirebaseFirestoreSwift
 
-struct Exercise: Identifiable, Decodable {
-    
-    @DocumentID var id: String? = UUID().uuidString   // unique to TODO
+//struct Exercise: Identifiable, Decodable {
+struct Exercise {
+
+//    @DocumentID var id: String? = UUID().uuidString   // unique to TODO
+    var id: String
     var exercise: String
-    var date = Date()
+    var date: Date
     var weight: Double
     var reps: Int
-    var ExerciseType: String
+    var exerciseType: String
     
-    func getExerciseType() -> selectedButton {
-        if ExerciseType == "Chest" {
-            return .chest
-        } else if ExerciseType == "Back" {
-            return .back
-        } else if ExerciseType == "Legs" {
-            return .legs
-        } else if ExerciseType == "Core" {
-            return .core
-        } else if ExerciseType == "Shoulder" {
-            return .shoulder
-        } else if ExerciseType == "Arms" {
-            return .arms
-        } else if ExerciseType == "Exercize" {
-            return .exercize
-        } else if ExerciseType == "Run" {
-            return .run
-        } else {
-            return .extra
-        }
-    }
+//    func getExerciseType() -> selectedButton {
+//        if ExerciseType == "Chest" {
+//            return .chest
+//        } else if ExerciseType == "Back" {
+//            return .back
+//        } else if ExerciseType == "Legs" {
+//            return .legs
+//        } else if ExerciseType == "Core" {
+//            return .core
+//        } else if ExerciseType == "Shoulder" {
+//            return .shoulder
+//        } else if ExerciseType == "Arms" {
+//            return .arms
+//        } else if ExerciseType == "Exercize" {
+//            return .exercize
+//        } else if ExerciseType == "Run" {
+//            return .run
+//        } else {
+//            return .extra
+//        }
+//    }
 }

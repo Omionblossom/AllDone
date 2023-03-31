@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CheckInBannerView: View {
+    
+    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel2: EntryViewModel
+    
     var body: some View {
 //        let isPastDate = Date() > manager.selectedDate
     ZStack{
@@ -22,8 +26,9 @@ struct CheckInBannerView: View {
                 }.foregroundColor(Color("LightColor"))
                 Spacer()
                 Button {
-                    // Set up next view to move on
-                    //manager.fullScreenMode = .entryCreator
+                    if let user = viewModel.currentUser {
+                        EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
+                    }
                 } label: {
                     ZStack {
                         Color("LightColor").cornerRadius(10)

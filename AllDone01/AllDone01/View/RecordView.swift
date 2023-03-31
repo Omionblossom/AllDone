@@ -11,7 +11,7 @@ struct RecordView: View {
     
     var record: Exercise
 
-    @ObservedObject var viewModel: ShowRecordsViewModel
+//    @ObservedObject var viewModel: ShowRecordsViewModel
     
     var body: some View {
 
@@ -41,6 +41,6 @@ struct RecordView: View {
 
 struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordView(record: exercise01, viewModel: ShowRecordsViewModel())
+        RecordView(record: exercise01)
     }
 }

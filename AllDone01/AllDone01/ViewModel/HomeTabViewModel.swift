@@ -1,0 +1,51 @@
+//
+//  HomeTabViewModel.swift
+//  AllDone01
+//
+//  Created by 湯川隆臣 on 2023/03/29.
+//
+
+import Foundation
+import Firebase
+
+class HomeTabViewModel: ObservableObject {
+    
+    struct State {
+        var exercises: [Exercise]
+        
+    }
+    
+    //    @Published var state: State = State(exercises: [.init(id: "id1", exercise: "ShoulderPress", date: Date(), weight: 55, reps: 18, exerciseType: "shoulder"), .init(id: "id2", exercise: "DumbelRow", date: Date(), weight: 20, reps: 14, exerciseType: "back")])  // sample
+    
+    @Published var state: State = State(exercises: [])  // プロパティ名は小文字
+    
+    
+    let data: [String: Any ] = [
+        "exercise": "",
+        "date": Date(),
+        "weight": 0.0,
+        "reps": 0
+    ]
+    
+    func onAppear () {
+        guard let user = AuthViewModel.shared.currentUser else { return }
+        
+        let query = COLLECTION_USERS.document(user.uid).collection("records").order(by: "exercise", descending: false)
+        
+//        query.getDocuments { snapshot, _ in
+//
+//            guard let documents = snapshot?.documents else { return }
+//            print(documents)
+            
+            //            self.exercises = documents.compactMap({ try? $0.data(as: TODO.self) })
+            
+//            state.exercises = documents
+            
+            
+                    state.exercises = [.init(id: "id1", exercise: "ShoulderPress", date: Date(), weight: 55, reps: 18, exerciseType: "shoulder"), .init(id: "id2", exercise: "DumbelRow", date: Date(), weight: 20, reps: 14, exerciseType: "back")]
+        }
+        
+    }
+
+
+

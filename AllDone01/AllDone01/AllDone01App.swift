@@ -32,6 +32,7 @@ struct AllDone01App: App {
 //              LoginView()
             ContentView()
                 .environmentObject(AuthViewModel.shared)
+                .environmentObject(HomeTabViewModel())
               //       NavigationView {    // firebase mentioned it with ContentView under NavigationView. Taking note here
                         // ContentView()
         }

@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HomeTabView: View {
     
-    @EnvironmentObject var viewModel: AuthViewModel
-    @EnvironmentObject var viewModel2: EntryViewModel
+    @EnvironmentObject var viewModel: HomeTabViewModel
     
     // MARK: - Main rendering function
     var body: some View {
@@ -26,27 +25,28 @@ struct HomeTabView: View {
                     // Temporarily set up with CheckInBannerView and EmptyListView
                     VStack{
                         CheckInBanner1View
-                        EmptyList1View
-                        Spacer()
+                        if viewModel.state.exercises.isEmpty {
+                            EmptyList1View
+                            Spacer()
+                        }
+                        ScrollView {   // if I want horizontal, do (.horizontal) otherwise vertical
+                            
+                            LazyVStack(spacing: 15){
+                                
+                                ForEach (viewModel.state.exercises, id: \.id) { exercise in
+                                    
+                                        RecordView(record: exercise)
+                                
+                                } // end of ForEach
+                            } // end of VStack
+                        } // end of ScrollView
                 }
-// Not yet DB available so crossing it out 後でIf文を完了してデータをロードし表示する
-//                if let entries = results.filter({ $0.date?.longFormat == manager.selectedDate.longFormat }), entries.count > 0 {
-//                    ScrollView(.vertical, showsIndicators: false) {
-//                        Spacer(minLength: 6)
-//                        LazyVStack(spacing: 0) {
-//                            CheckInBanner1View
-//                            ForEach(entries.sorted(by: { $0.date ?? Date() > $1.date ?? Date() })) { entry in
-//                                JournalEntryItem(model: entry)
-//                            }
-//                        }
-//                        Spacer(minLength: 100)
-//                    }
-//                } else {
-//                    CheckInBannerView.padding(.top, 6)
-//                    EmptyListView
-//                }
             }
-        }.padding(.top, 10)
+        }
+        .padding(.top, 10)
+        .onAppear{
+            viewModel.onAppear()
+            }
     }
 }
 
