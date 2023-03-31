@@ -34,12 +34,12 @@ struct DashboardTestView: View {
     var body: some View {
         ZStack {
             BackgroundGradientView()
-            VStack {
-                HeaderTitle
-                HeaderCalendarView(days: [], selectedDate: Date(), onTapGesture: { _ in
-                })
+//            VStack {
+//                HeaderTitle
+//                HeaderCalendarView(days: [], selectedDate: Date(), onTapGesture: { _ in
+//                })
                 HomeTabView()
-            } // end of VStack
+//            } // end of VStack
         } // end of ZStack
         }
             //                Color("BackgroundColor").ignoresSafeArea()

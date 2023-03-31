@@ -18,7 +18,7 @@ struct Exercise {
     var date: Date
     var weight: Double
     var reps: Int
-    var exerciseType: String
+//    var exerciseType: String
     
 //    func getExerciseType() -> selectedButton {
 //        if ExerciseType == "Chest" {

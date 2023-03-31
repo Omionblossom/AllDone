@@ -10,7 +10,7 @@ import SwiftUI
 struct HeaderCalendarView: View {
     
     var days: [Date]
-    var selectedDate: Date
+    var selectedDate: Date?
     var onTapGesture: (Date) -> Void
     
     var body: some View {
@@ -19,7 +19,7 @@ struct HeaderCalendarView: View {
                 HStack(spacing: 15) {
                     Spacer(minLength: 0)
                     ForEach(days, id: \.self) { date in
-                        CalendarItemCard(isTodayItem: date.longFormat == Date().longFormat, isSelectedItem: date.longFormat == selectedDate.longFormat, date: date).id(date).onTapGesture {
+                        CalendarItemCard(isTodayItem: date.longFormat == Date().longFormat, isSelectedItem: date.longFormat == selectedDate?.longFormat, date: date).id(date).onTapGesture {
                             onTapGesture(date)
                         }
                     }

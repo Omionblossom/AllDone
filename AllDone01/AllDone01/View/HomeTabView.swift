@@ -13,40 +13,45 @@ struct HomeTabView: View {
     
     // MARK: - Main rendering function
     var body: some View {
-        ZStack {
-//            BackgroundGradientView().ignoresSafeArea()
-            RoundedCorner(radius: 30, corners: [.topLeft, .topRight])
-                .foregroundColor(Color("ListColor")).ignoresSafeArea()
-                VStack(spacing: 0){
-                    Capsule().frame(width: 50, height: 5).padding(12)
-                        .foregroundColor(Color("DarkColor"))
-                    Spacer()
-                    
-                    // Temporarily set up with CheckInBannerView and EmptyListView
-                    VStack{
-                        CheckInBanner1View
-                        if viewModel.state.exercises.isEmpty {
-                            EmptyList1View
-                            Spacer()
-                        }
-                        ScrollView {   // if I want horizontal, do (.horizontal) otherwise vertical
-                            
-                            LazyVStack(spacing: 15){
+        VStack {
+            HomeTabHeader
+            HeaderCalendarView(days: viewModel.state.calendarDays, selectedDate: viewModel.state.selectedDate, onTapGesture:{ _ in}) //onTapCalendar(date()))
+//                                { _ in})
+            ZStack {
+    //            BackgroundGradientView().ignoresSafeArea()
+                RoundedCorner(radius: 30, corners: [.topLeft, .topRight])
+                    .foregroundColor(Color("ListColor")).ignoresSafeArea()
+                    VStack(spacing: 0){
+                        Capsule().frame(width: 50, height: 5).padding(12)
+                            .foregroundColor(Color("DarkColor"))
+                        Spacer()
+                        
+                        // Temporarily set up with CheckInBannerView and EmptyListView
+                        VStack{
+                            CheckInBanner1View
+                            if viewModel.state.exercises.isEmpty {
+                                EmptyList1View
+                                Spacer()
+                            }
+                            ScrollView {   // if I want horizontal, do (.horizontal) otherwise vertical
                                 
-                                ForEach (viewModel.state.exercises, id: \.id) { exercise in
+                                LazyVStack(spacing: 15){
                                     
-                                        RecordView(record: exercise)
-                                
-                                } // end of ForEach
-                            } // end of VStack
-                        } // end of ScrollView
+                                    ForEach (viewModel.state.exercises, id: \.id) { exercise in
+                                        
+                                            RecordView(record: exercise)
+                                    
+                                    } // end of ForEach
+                                } // end of VStack
+                            } // end of ScrollView
+                    }
                 }
             }
+            .padding(.top, 10)
+            .onAppear{
+                viewModel.onAppear()
         }
-        .padding(.top, 10)
-        .onAppear{
-            viewModel.onAppear()
-            }
+        }
     }
 }
 
@@ -118,6 +123,18 @@ private var HomeTabHeader: some View {
         }.padding(.horizontal).foregroundColor(Color("LightColor"))
 
     }.multilineTextAlignment(.center).foregroundColor(Color("TextColor"))
+}
+
+private var HomeTabHeaderTitle: some View {
+    HStack(alignment: .top) {
+        VStack(alignment: .leading) {
+            Text("Daily Records")
+                .font(.largeTitle).bold()
+            //                Text(manager.selectedDate.headerTitle)
+//                Text(selectedTab.headerTitle).font(.largeTitle).bold()
+        }
+        Spacer()
+    }.padding(.horizontal).foregroundColor(Color("LightColor"))
 }
 
 
