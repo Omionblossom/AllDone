@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel2: EntryViewModel
     
     var body: some View {
         
@@ -18,7 +19,27 @@ struct ContentView: View {
                 LoginView()
             } else {
                 if let user = viewModel.currentUser {
-                    DashboardView(user: user)
+//                    MainWindowView()
+//                    DashboardView(user: user)
+                    TabView {
+                        DashboardTestView()
+                            .tabItem{
+                                Label("Home", systemImage: "house")
+                            }
+                        DashboardView(user: user)
+                            .tabItem{
+                                Label("TODO", systemImage: "list.bullet.circle")
+                            }
+                        EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
+                            .tabItem{
+                                Label("Add", systemImage: "plus.circle")
+                            }
+                        ExerciseEntryView(user: user, viewModel2: EntryViewModel())
+//                        TabAView()
+                            .tabItem{
+                                Label("Goals", systemImage: "list.dash")
+                            }
+                    }.padding(.bottom, 6)
                 }
             }
         }

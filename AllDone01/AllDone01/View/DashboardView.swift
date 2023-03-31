@@ -22,7 +22,7 @@ struct DashboardView: View {
             VStack{
                 HStack {
                     Spacer()
-                    Text("- AllDone -")
+                    Text("- UPPPER -")
                         .font(.system(size: 24))
                         .fontWeight(.semibold)
                     Spacer()
@@ -54,7 +54,7 @@ struct DashboardView: View {
                 
                 ScrollView {   // if I want horizontal, do (.horizontal) otherwise vertical
                     
-                    VStack(spacing: 15){
+                    LazyVStack(spacing: 15){
                         
                         ForEach (viewModel.todosFiltered, id: \.id) { todo in
                             
@@ -89,9 +89,9 @@ struct DashboardView: View {
                                 .cornerRadius(30)
                         }
                         .padding(20)
-                        
+                        .padding(.bottom, 120)
                         } // end of HStack
-
+                    
                     } // end of VStack
             )
             
@@ -99,7 +99,6 @@ struct DashboardView: View {
                 BlankView()
                 CreateTODOView(user: user, viewModel: viewModel)
             }
-            
             
         } // end of Zstack
         

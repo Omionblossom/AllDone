@@ -81,11 +81,17 @@ struct TODOButton: View {
                 .foregroundColor(viewModel.filterTODOSelected == buttonType ?
                     .white : Color(.systemGray))
                 .frame(width: 100, height: 40)
-                .backgroundStyle(buttonType == viewModel.filterTODOSelected ? Color(.blue) : Color(.systemGray6))
+                .background(
+                    ZStack {
+                        if buttonType == viewModel.filterTODOSelected {
+                            Color.black.opacity(0.3)
+                        } else {
+                            Color(.systemGray6)
+                        }
+                    }
+                )
+//                .backgroundStyle(buttonType == viewModel.filterTODOSelected ? Color(.black) : Color(.systemGray6))
                 .cornerRadius(20)
         }
-
-        
-        
     }
 }
