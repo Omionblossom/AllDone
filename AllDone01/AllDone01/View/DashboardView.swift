@@ -73,27 +73,27 @@ struct DashboardView: View {
                 
                 
             } // end of VStack
-            .overlay(
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button {
-                            viewModel.showCreateTODOView = true
-                        } label: {
-                            Image(systemName: "plus")
-                                .padding()
-                                .foregroundColor(.white)
-                                .frame(width: 60, height: 60)
-                                .background(Color("lightBlue"))
-                                .cornerRadius(30)
-                        }
-                        .padding(20)
-                        .padding(.bottom, 120)
-                        } // end of HStack
-                    
-                    } // end of VStack
-            )
+//            .overlay(
+//                VStack {
+//                    Spacer()
+//                    HStack {
+//                        Spacer()
+//                        Button {
+//                            viewModel.showCreateTODOView = true
+//                        } label: {
+//                            Image(systemName: "plus")
+//                                .padding()
+//                                .foregroundColor(.white)
+//                                .frame(width: 60, height: 60)
+//                                .background(Color("lightBlue"))
+//                                .cornerRadius(30)
+//                        }
+//                        .padding(20)
+//                        .padding(.bottom, 120)
+//                        } // end of HStack
+//
+//                    } // end of VStack
+//            ) // end of overlay
             
             if viewModel.showCreateTODOView {
                 BlankView()

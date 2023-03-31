@@ -21,12 +21,12 @@ struct AddTODOLogo: View {
                 .background(colorScheme == .dark ? .clear : .black)
                 .cornerRadius(80)
             
-            Text("No exercize registered so far!")
+            Text("Not enough record yet.")
                 .foregroundColor(colorScheme == .dark ? .white : .black)
                 .font(.system(size: 25))
                 .fontWeight(.semibold)
             
-            Text("Let's try some New!")
+            Text("Stats are coming soon!")
                 .foregroundColor(colorScheme == .dark ? .white : .black)
                 .font(.system(size: 25))
                 .fontWeight(.semibold)

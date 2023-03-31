@@ -26,19 +26,23 @@ struct ContentView: View {
                             .tabItem{
                                 Label("Home", systemImage: "house")
                             }
-                        DashboardView(user: user)
-                            .tabItem{
-                                Label("TODO", systemImage: "list.bullet.circle")
-                            }
+//                        DashboardView(user: user)
+//                            .tabItem{
+//                                Label("TODO", systemImage: "list.bullet.circle")
+//                            }
                         EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
                             .tabItem{
                                 Label("Add", systemImage: "plus.circle")
                             }
-                        ExerciseEntryView(user: user, viewModel2: EntryViewModel())
-//                        TabAView()
+                        DashboardView(user: user)
                             .tabItem{
-                                Label("Goals", systemImage: "list.dash")
+                                Label("Admin", systemImage: "info.circle")
                             }
+//                        ExerciseEntryView(user: user, viewModel2: EntryViewModel())
+////                        TabAView()
+//                            .tabItem{
+//                                Label("Goals", systemImage: "list.dash")
+//                            }
                     }.padding(.bottom, 6)
                 }
             }

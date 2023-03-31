@@ -11,6 +11,7 @@ struct LoginView: View {
     
     @State var email = ""
     @State var password = ""
+    @State var forgotPW: Bool = false
     
     @EnvironmentObject var viewModel: AuthViewModel
     
@@ -35,13 +36,16 @@ struct LoginView: View {
                        
                        Button {
                            // forgot password action
+                           forgotPW = true
                        } label: {
                            Text("Forgot Password")
                                .foregroundColor(.white)
                                .font(.system(size: 13, weight: .semibold))
                                .padding(.top)
                                .padding(.trailing, 28)
-                       }
+                       }.alert(isPresented: $forgotPW, content: {
+                           Alert(title: Text("Please contact Admin Mgr"))
+                       })
                    } // end of HStack
      
                    Button {

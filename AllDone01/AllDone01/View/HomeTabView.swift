@@ -69,17 +69,15 @@ private var CheckInBanner1View: some View {
 //                    Text(disableCheckIn ? "\(isPastDate ? "Past" : "Future") Check-In is disabled" : "How is your day so far?")
                 }.foregroundColor(Color("LightColor"))
                 Spacer()
-                Button {
-//                    EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
-                    // Set up next view to move on
-                    //manager.fullScreenMode = .entryCreator
-                } label: {
-                    ZStack {
-                        Color("LightColor").cornerRadius(10)
-                        Text("Check-In").font(.system(size: 14, weight: .semibold))
-                            .foregroundColor(Color("BackgroundColor"))
-                    }
-                }.frame(width: 88, height: 42) //.disabled(disableCheckIn)
+//                Button {
+//                    // EntryTabViewに行くのはよろしく無いので別画面を別途作る
+//                } label: {
+//                    ZStack {
+//                        Color("LightColor").cornerRadius(10)
+//                        Text("Check-In").font(.system(size: 14, weight: .semibold))
+//                            .foregroundColor(Color("BackgroundColor"))
+//                    }
+//                }.frame(width: 88, height: 42) //.disabled(disableCheckIn)
             }.padding()
         }
         .frame(height: 72).padding([.horizontal, .bottom])
@@ -92,23 +90,23 @@ private var EmptyList1View: some View {
         Spacer()
         Image(systemName: "list.star").font(.largeTitle).padding(2)
         Text("No Entries Yet").font(.title3).bold()
-        Text("You don't have any entries for today\nTap the 'Check-In' button to add an entry")
+        Text("You don't have any entries for today\nTap the 'Add' button to register your record")
             .font(.subheadline).opacity(0.6)
         //            Spacer()
-        Button {
-//            EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
-            // Set up next view to move on
-            //manager.fullScreenMode = .entryCreator
-        } label: {
-            ZStack {
-                Color("BackgroundColor").cornerRadius(10)
-                    .frame(width: 200, height: 40)
-                    .opacity(0.9)
-                //                    Color("ListColor").cornerRadius(10) .padding()
-                Text("Check-In").font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(Color("ListColor"))
-            }.frame(width: 88, height: 42)
-        }.padding(.top, 20)
+//        Button {
+////            EntryTabView(user: user, viewModel: TODOViewModel(), viewModel2: EntryViewModel())
+//            // Set up next view to move on
+//            //manager.fullScreenMode = .entryCreator
+//        } label: {
+//            ZStack {
+//                Color("BackgroundColor").cornerRadius(10)
+//                    .frame(width: 200, height: 40)
+//                    .opacity(0.9)
+//                //                    Color("ListColor").cornerRadius(10) .padding()
+//                Text("Check-In").font(.system(size: 14, weight: .semibold))
+//                    .foregroundColor(Color("ListColor"))
+//            }.frame(width: 88, height: 42)
+//        }.padding(.top, 20)
         Spacer()
     }.multilineTextAlignment(.center).foregroundColor(Color("TextColor"))
 }
@@ -118,7 +116,7 @@ private var HomeTabHeader: some View {
     ZStack {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text("How's your day?")
+                Text("Raise your bar real high.")
                 Text("Daily Records").font(.largeTitle).bold()
             }
             Spacer()

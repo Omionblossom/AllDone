@@ -15,7 +15,7 @@ struct SearchBarView: View {
     var body: some View {
 
         HStack {
-            TextField("Search TODO", text: $searchText)
+            TextField("Search Stats Log", text: $searchText)
                 .searchTextFieldStyle()
                 .onTapGesture(perform: {
                     isSearching = true
