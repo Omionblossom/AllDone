@@ -15,7 +15,8 @@ struct HomeTabView: View {
     var body: some View {
         VStack {
             HomeTabHeader
-            HeaderCalendarView(days: viewModel.state.calendarDays, selectedDate: viewModel.state.selectedDate, onTapGesture:{ _ in}) //onTapCalendar(date()))
+            HeaderCalendarView(days: viewModel.state.calendarDays, selectedDate: viewModel.state.selectedDate, onTapGesture:
+                                { viewModel.onTapCalendar(date: $0)}) //onTapCalendar(date()))
 //                                { _ in})
             ZStack {
     //            BackgroundGradientView().ignoresSafeArea()

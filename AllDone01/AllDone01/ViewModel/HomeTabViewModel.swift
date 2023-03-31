@@ -30,9 +30,6 @@ class HomeTabViewModel: ObservableObject {
     ]
     
     func onAppear () {
-        guard let user = AuthViewModel.shared.currentUser else { return }
-        
-        let query = COLLECTION_USERS.document(user.uid).collection("records").order(by: "exercise", descending: false)
         let day = Date()
         state.selectedDate = Date()
         state.calendarDays = [
@@ -54,6 +51,19 @@ class HomeTabViewModel: ObservableObject {
                               Calendar.current.date(byAdding: .day, value:1, to:day
                                                    )!
         ]
+        if let date = state.selectedDate {
+            updateExercises (date: date)
+        }
+    }
+    
+    func updateExercises (date: Date) {
+        guard let user = AuthViewModel.shared.currentUser else { return }
+        
+//        let query = COLLECTION_USERS.document(user.uid).collection("records").order(by: "exercise", descending: false)
+        let start = Calendar.current.startOfDay(for: date)
+        let end = Calendar.current.date(byAdding: .day, value: 1, to: start)
+        let query = COLLECTION_USERS.document(user.uid).collection("records").order(by: "date", descending: false).start(at: [start]).end(at: [end])
+        
         
         query.getDocuments { snapshot, _ in
             
@@ -77,12 +87,14 @@ class HomeTabViewModel: ObservableObject {
             
             //                    state.exercises = [.init(id: "id1", exercise: "ShoulderPress", date: Date(), weight: 55, reps: 18, exerciseType: "shoulder"), .init(id: "id2", exercise: "DumbelRow", date: Date(), weight: 20, reps: 14, exerciseType: "back")]
         }
-        
-        
     }
     
-    func onTapCalendar () {
-        var date = state.selectedDate
+    func onTapCalendar (date: Date) {
+        state.selectedDate = date
+        if let date = state.selectedDate {
+            updateExercises (date: date)
+        }
+//            var date = state.selectedDate
     }
     
     
