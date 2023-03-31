@@ -39,13 +39,13 @@ struct EntryTabView: View {
                                 }, set: {
                                     viewModel2.onInputExercise($0)
                                 }))
-                                Button {
-                                    viewModel2.showExerciseEntryView = true
-                                } label: {
-                                    Image(systemName: "text.book.closed")
-                                        .padding(.trailing, 12)
-                                        .foregroundColor(Color(.systemPink))
-                                }
+//                                Button {
+//                                    viewModel2.showExerciseEntryView = true
+//                                } label: {
+//                                    Image(systemName: "text.book.closed")
+//                                        .padding(.trailing, 12)
+//                                        .foregroundColor(Color(.systemPink))
+//                                }
 
                             }
                             .padding([.horizontal, .bottom])
@@ -96,7 +96,8 @@ struct EntryTabView: View {
     private var HeaderTitle: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text("Day, YYYY/MM/DD")
+//                Text("Day, YYYY/MM/DD")
+                Text("Stay motivated!")
                 Text("Register Records")
                     .font(.largeTitle).bold()
                 //                Text(manager.selectedDate.headerTitle)

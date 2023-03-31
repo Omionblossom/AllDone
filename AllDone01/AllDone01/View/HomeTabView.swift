@@ -117,9 +117,10 @@ private var HomeTabHeader: some View {
     ZStack {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text("HeaderHere")
-                Text("HeaderSubtextHere").font(.largeTitle).bold()
+                Text("How's your day?")
+                Text("Daily Records").font(.largeTitle).bold()
             }
+            Spacer()
         }.padding(.horizontal).foregroundColor(Color("LightColor"))
 
     }.multilineTextAlignment(.center).foregroundColor(Color("TextColor"))
