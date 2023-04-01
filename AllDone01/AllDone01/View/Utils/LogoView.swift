@@ -14,7 +14,7 @@ struct LogoView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height:150)
-            Text("AllDone")
+            Text("-UPPPER-")
                 .foregroundColor(.white)
                 .font(.system(size: 25))
                 .fontWeight(.semibold)
